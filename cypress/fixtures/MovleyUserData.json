@@ -1,0 +1,33 @@
+{
+    
+    "MovleyUser_email" :"nabeel@mavrictech.com",
+    "MovleyUserpass":"root",
+
+    "companyName":"Dragon Enterprises-68",
+    "color": "Green",
+    "firstName":"Jack",
+    "lastName": "Son",
+    "emailAddress": "c51@yopmail.com",
+
+    "CustomerUser_pass": "root1234",
+    "CustomerUser_confrim_pass": "root1234",
+    "ProductName":"Cement-T01",
+    
+    "Inspection_ShippingDate":"28",
+    "Inspection_PreStartDate": "28",
+    "Inspection_PreEndDate": "28",
+    "Inspection_Date":"28",
+    "ProductSharePointURL": "https://www.google.com",
+    "DefaultInspectionStatus": "Submitted For Review",
+    "InspectionStatus": "Pass",
+    "ResultDocURL": "https://facebook.com",
+    "testType":"Weights and Measurement",
+    "testName": "Water Proof",
+    "testNameUpdate": "Visual Inspection 01",
+    "testInstructions": "This test is to make sure that product is water proof.",
+    "expectedResults": "This test should be passed."
+
+
+
+   
+ }

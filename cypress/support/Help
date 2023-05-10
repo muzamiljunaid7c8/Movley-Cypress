@@ -1,0 +1,32 @@
+DataTable
+If you want to avoid the hardcode, I recommend you to review this, and change the code in this way:
+
+Scenario: Filling the form to shop
+  Given I open ECommerce Page
+  When I fill the form details
+    | name   | bobz |
+    | gender | Male |
+  Then validate the forms behaviour
+  And select the Shop Page 
+The step implementation:
+
+When('I fill the form details',function(dataTable){
+  const formVals = datatable.rowsHash();
+  homePage.getEditBox().type(formVals.name);
+  homePage.getGender().select(formVals.gender);
+});
+And if you want to repeat the same scenario with different data:
+
+Scenario Outline: Filling the form to shop
+  Given I open ECommerce Page
+  When I fill the form details
+    | name   | <exampleName>   |
+    | gender | <exampleGender> |
+  Then validate the forms behaviour
+  And select the Shop Page 
+  
+  Examples:
+    | exampleName | exampleGender |
+    | bobz        | Male          |
+    | Jane        | Female        |
+This scenario will execute twice, one execution with the data bobz Male, and another one with Jane Female

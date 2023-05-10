@@ -1,0 +1,41 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headTest": "npm run test --headed",
+    "chromeTest": "npm run test-- --browser chrome",
+    "recordDashBoardTest": "npm run test --record --key fa423514-5a84-42a7-b6a0-b5e7191bba12 --reporter mochawesome",
+    "GreenKartTest": "npm run test --spec \"tests/cypress/integration/GreenKart/Movley_Smoke.js\"",
+    "cucufeaturechrome": "./node_modules/.bin/cypress run --spec tests/cypress/integration/*.feature --browser chrome",
+    "cucujschrome": "./node_modules/.bin/cypress run --spec cypress/integration/Movely_Smoke.js --headed --browser chrome "
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "author": "MuzamilJunaid",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "allure-commandline": "2.17.2",
+    "cypress": "^10.11.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
+    "cypress-xpath": "^2.0.1",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  },
+  "dependencies": {
+    "mocha-allure-reporter": "^1.4.0"
+  }
+}
